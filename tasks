@@ -1,13 +1,18 @@
 1.git initaiate --> Aditya  --> Done
-2.DVC --> Aditya  
+2.DVC --> Aditya   --> Done
 3.Find the data problems in train.csv --> Aradhya
 4.cleaning data --> Aradhya
 5.MLflow tracking and registry --> Mushkan
 6.tests --> Muskan
 7.FastAPI Service --> Ansh
 8.Dockerfile --> Ansh
+8.5 Green github action (all)
 9.Kubernetes --> Aditya
 10.logging --> Aradhya
+11.drift, retraining, holdout predictions, findings.yaml
 
 
 //please do the task in the order given any other order might break the project and upon doing it please add a done mark ahead 
+
+s3 -- access key - AKIA3SIBXV6WN4YGHK67
+s3 -- secret key - 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

@@ -1,0 +1,4 @@
+[core]
+    remote = dvcbucket
+['remote "dvcbucket"']
+    url = s3://dvcg205-mp202

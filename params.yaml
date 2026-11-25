@@ -1,0 +1,20 @@
+data:
+  train_path: data/raw/train.csv
+  later_path: data/raw/later.csv
+  holdout_path: data/raw/holdout_features.csv
+features:
+  numeric: [age_years, km_driven, engine_cc, owners, service_records, accidents]
+  categorical: [brand_tier, city_zone]
+  target: resale_thousand_rs
+mlflow:
+  tracking_uri: "sqlite:///mlflow.db"
+  experiment_name: mp202-used-two-wheeler
+  registered_model_name: mp202-price-model
+training:
+  test_size: 0.2
+  random_state: 42
+  model_path: models/model.joblib
+  runs:
+    - {name: rf_100_d6, model: random_forest, n_estimators: 100, max_depth: 6}
+    - {name: rf_300_d12, model: random_forest, n_estimators: 300, max_depth: 12}
+    - {name: gbr_200_lr005, model: gradient_boosting, n_estimators: 200, learning_rate: 0.05}

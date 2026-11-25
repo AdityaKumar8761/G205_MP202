@@ -3,7 +3,7 @@
 3.Find the data problems in train.csv --> Aradhya  --> Done
 4.cleaning data --> Aradhya  --> Done
 5.MLflow tracking and registry --> Muskan->Done
-6.tests --> Muskan->Done (API test pending ,it will done after 6.tests --> Muskan  --> Done (API test pending, will be added after step 7 FastAPI))
+6.tests --> Muskan->Done (API test pending ,it will done after step 7 FastAPI))
 7.FastAPI Service --> Ansh
 8.Dockerfile --> Ansh
 8.5 Green github action (all)

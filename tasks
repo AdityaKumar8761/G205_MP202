@@ -3,12 +3,12 @@
 3.Find the data problems in train.csv --> Aradhya  --> Done
 4.cleaning data --> Aradhya  --> Done
 5.MLflow tracking and registry --> Muskan->Done
-6.tests --> Muskan->Done (API test done after step 7 FastAPI)
-7.FastAPI Service --> Ansh --> Done
-8.Dockerfile --> Ansh --> Done
-8.5 Green github action (all)
-9.Kubernetes --> Aditya
-10.logging --> Aradhya
+6.tests --> Muskan->Done 
+7.FastAPI Service --> Aditya --> Done
+8.Dockerfile --> Aditya --> Done
+8.5 Green github action --> Created the workflows
+9.Kubernetes --> Ansh
+10.logging --> Ansh
 11.drift, retraining, holdout predictions, findings.yaml
 
 

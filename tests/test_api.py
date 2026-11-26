@@ -4,6 +4,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from FastAPI import main as api
+from app.main import app as alternate_app
 
 
 VALID_REQUEST = {
@@ -73,3 +74,59 @@ def test_invalid_requests_are_rejected_before_prediction(api_client, changes):
 
     assert response.status_code == 422
     assert stub.calls == 0
+
+
+@pytest.fixture(scope="module")
+def alternate_client():
+    with TestClient(alternate_app) as client:
+        yield client
+
+
+def test_alternate_app_health(alternate_client):
+    response = alternate_client.get("/health")
+
+    assert response.status_code == 200
+    assert response.json()["status"] == "ok"
+
+
+def test_alternate_app_predicts_boundary_values(alternate_client):
+    payload = {
+        "age_years": 0,
+        "km_driven": 12000,
+        "engine_cc": 800,
+        "owners": 1,
+        "service_records": None,
+        "accidents": 0,
+        "brand_tier": "mid",
+        "city_zone": "Central",
+    }
+
+    response = alternate_client.post("/predict", json=payload)
+
+    assert response.status_code == 200
+    assert math.isfinite(response.json()["resale_thousand_rs"])
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        {"age_years": -1},
+        {"engine_cc": 801},
+        {"unexpected_field": True},
+    ],
+)
+def test_alternate_app_rejects_invalid_input(alternate_client, change):
+    payload = {
+        "age_years": 0,
+        "km_driven": 12000,
+        "engine_cc": 800,
+        "owners": 1,
+        "service_records": None,
+        "accidents": 0,
+        "brand_tier": "mid",
+        "city_zone": "Central",
+    }
+
+    response = alternate_client.post("/predict", json={**payload, **change})
+
+    assert response.status_code == 422

@@ -1,13 +1,13 @@
 data:
-  train_path: data/raw/train.csv
-  later_path: data/raw/later.csv
-  holdout_path: data/raw/holdout_features.csv
+  train_path: data/train.csv
+  later_path: data/later.csv
+  holdout_path: data/holdout_features.csv
 features:
   numeric: [age_years, km_driven, engine_cc, owners, service_records, accidents]
   categorical: [brand_tier, city_zone]
   target: resale_thousand_rs
 mlflow:
-  tracking_uri: "sqlite:///mlflow.db"
+  tracking_uri: "sqlite:///mlflow-local.db"
   experiment_name: mp202-used-two-wheeler
   registered_model_name: mp202-price-model
 training:

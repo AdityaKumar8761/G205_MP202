@@ -4,5 +4,8 @@
 mlruns/
 mlartifacts/
 .venv/
+myenv/
+mlflow-local.db*
 __pycache__/
 .pytest_cache/
+myenv

@@ -1,4 +1,4 @@
-"""Task 5: MLflow tracking + registry. Run from repo root: python -m mp202.train"""
+"""Task 5: MLflow tracking + registry. From repo root: PYTHONPATH=src python -m mp202.train"""
 import hashlib
 from pathlib import Path
 

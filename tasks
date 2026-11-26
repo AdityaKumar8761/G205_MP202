@@ -5,7 +5,7 @@
 5.MLflow tracking and registry --> Muskan->Done
 6.tests --> Muskan->Done (API test done after step 7 FastAPI)
 7.FastAPI Service --> Ansh --> Done
-8.Dockerfile --> Ansh
+8.Dockerfile --> Ansh --> Done
 8.5 Green github action (all)
 9.Kubernetes --> Aditya
 10.logging --> Aradhya

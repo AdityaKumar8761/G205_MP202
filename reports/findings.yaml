@@ -44,21 +44,21 @@ tracking:
   champion_version: 1
 monitoring:
   psi:
-    age_years: null
-    km_driven: null
-    engine_cc: null
-    owners: null
-    service_records: null
-    accidents: null
+    age_years: 0.035783986798679314
+    km_driven: 0.02160969283009042
+    engine_cc: 5.219397231694705
+    owners: 0.008029002221738033
+    service_records: 0.01076574472453073
+    accidents: 0.005562365610772328
 
-  most_drifted_feature: null
+  most_drifted_feature: engine_cc
 
   mae_by_group:
-    "North": null
-    "South": null
-    "Central": null
+    "North": 49.18284930464196
+    "South": 11.161835773754392
+    "Central": 12.526097199193554
 
-  worst_served_group: null
-  mae_v1_on_check: null
-  mae_v2_on_check: null
-  decision: null
+  worst_served_group: "North"
+  mae_v1_on_check: 34.645318179334964
+  mae_v2_on_check: 14.769935765403439
+  decision: promote_v2

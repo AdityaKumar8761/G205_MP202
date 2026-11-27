@@ -1,0 +1,2 @@
+{"timestamp":"2026-11-27T07:43:46.767+00:00","level":"INFO","service":"mp202-api","event":"prediction_request","status":"success","route":"/predict","status_code":200,"request_id":"7a4858ccc19f49a6","duration_ms":54.8}
+{"timestamp":"2026-11-27T07:43:46.784+00:00","level":"WARNING","service":"mp202-api","event":"prediction_request","status":"rejected","route":"/predict","status_code":422,"request_id":"5c3e66f118cc4392","duration_ms":1.34}

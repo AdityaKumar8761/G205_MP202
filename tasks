@@ -6,11 +6,26 @@
 6.tests --> Muskan->Done 
 7.FastAPI Service --> Aditya --> Done
 8.Dockerfile --> Aditya --> Done
-8.5 Green github action --> Created the workflows
-9.Kubernetes --> Ansh
-10.logging --> Ansh
+8.5 Green github action --> Created the workflows --> done(Aditya)
+9.Kubernetes --> Ansh --> Done
+10.logging --> Ansh --> Done
 11.drift, retraining, holdout predictions, findings.yaml
 
 
 //please do the task in the order given any other order might break the project and upon doing it please add a done mark ahead 
 
+//Kubernetes launch code 
+minikube start --driver=docker
+docker build -t mp202-api:1.0 .
+minikube image load mp202-api:1.0
+
+kubectl apply -f Task_9_Kubernetes/work/deployment.yaml
+kubectl apply -f Task_9_Kubernetes/work/service.yaml
+kubectl rollout status deployment/mp202-api
+
+kubectl port-forward service/mp202-svc 8080:80
+
+
+//to stop Kubernetes
+kubectl delete -f Task_9_Kubernetes/work/service.yaml -f Task_9_Kubernetes/work/deployment.yaml
+minikube stop

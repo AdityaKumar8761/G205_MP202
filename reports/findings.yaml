@@ -1,64 +1,53 @@
-group_id: "G205"
-problem_id: "MP202"
-
+group_id: G205
+problem_id: MP202
 data_issues:
   leaking_column:
     present: true
     column: final_price_from_rc_transfer
-
   unit_mixup:
     present: false
     column: null
     group_value: null
     factor: null
-
   sentinel_value:
     present: true
     column: service_records
     value: -999
     count: 38
-
   duplicate_rows:
     present: false
     count: null
-
   stuck_sensor:
     present: true
     column: accidents
-    start_date: "2026-04-11"
-    end_date: "2026-04-29"
-
+    start_date: '2026-04-11'
+    end_date: '2026-04-29'
   target_typos:
     present: false
     count: null
-
   spelling_variants:
     present: true
     column: brand_tier
     true_levels: 3
-
 tracking:
   experiment_name: mp202-used-two-wheeler
   best_run_id: ef60a821443046c18e217b78be849fde
   registered_model_name: mp202-price-model
-  champion_version: 1
+  champion_version: 2
 monitoring:
   psi:
     age_years: 0.035783986798679314
     km_driven: 0.02160969283009042
     engine_cc: 5.219397231694705
-    owners: 0.008029002221738033
+    owners: 0.00813507238943304
     service_records: 0.01076574472453073
-    accidents: 0.005562365610772328
-
+    accidents: 0.01193369694551645
   most_drifted_feature: engine_cc
-
   mae_by_group:
-    "North": 49.18284930464196
-    "South": 11.161835773754392
-    "Central": 12.526097199193554
-
-  worst_served_group: "North"
-  mae_v1_on_check: 34.645318179334964
-  mae_v2_on_check: 14.769935765403439
+    Central: 12.860906745844977
+    North: 49.24841611271179
+    South: 11.16364947648652
+  worst_served_group: North
+  mae_v1_on_check: 34.64177185467977
+  mae_v2_on_check: 14.76993576540344
   decision: promote_v2
